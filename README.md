@@ -6,7 +6,7 @@ This model has been constructed with both of these in mind, for those interested
 
 #### Model Coverage Map
 
-![Model Coverage of King County](http://url/to/img.png)
+![Model Coverage of King County](https://github.com/amandabgaeta/Kings-County-Housing-Modeling/blob/main/images/model_coverage_map.png?raw=true)
 
 ## The Data
 
