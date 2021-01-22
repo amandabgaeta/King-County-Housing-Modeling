@@ -1,66 +1,56 @@
-# Phase 2 Project
+## Introduction: Business Problem
 
-Another module down--you're almost half way there!
+COVID has made working from home a trend that will continue. With a job less dependent on living in a certain area, people are reassessing where they live whether that is within the same area or a completely different state or country. Another side effect of COVID has been the extreme reduction in interest rates, which have driven home purchases to skyrocketed.
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+This model has been constructed with both of these in mind, for those interested in buying a home in King County. Buyers should be able to progress decisioning on what zipcodes they can target in their home search along with what they can expect in relation to home features and quality within their budget. This should aid in their understanding on what they want to prioritize and/or sacrifice to get a home that fits their needs and is in their price range. Information derived can also point home buyers to research other things about the areas they are interesting like schooling for future family.
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+#### Model Coverage Map
 
-## Project Overview
+![Model Coverage of King County](http://url/to/img.png)
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+## The Data
 
-### The Data
+This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. 
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+### Data Processing
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+Notebook.pdf includes cleansing, editing, functions, and feature engineering that was utilized in mode iterations.
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+The /scratchWork folder has variations of data analysis, model approaches, and notebook iterations that were used to get to the final Notebook.pdf
 
-### Business Problem
+## Model Iteration
+Notebook.pdf includes an outline of the nine model iterations that were completed. From first to the last iteration of the model, the R2 was increased from 0.68 to 0.83, and RMSE was reduced from 204,432 USD to 90,878 USD --  meaning the final model can predict within ~91,000 USD of the pricing.
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+## Data Analysis
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+Zipcodes were a key driver of price in this model. Thus, analysis was approached by analyzed the top 5 positive price driving zipcodes and the top 5 negative price driving zipcodes. In addition, top home features that drove price beyond zipcode location were plotted and analyzed. 
 
-## Deliverables
+The /images folder holds the images of these plots.
 
-There are three deliverables for this project:
+## Recommendations on Model Utilization In Guiding Buyer Search
+#### If new to the area or starting with no information
+- 98072: Woodinville (Northeast of Seattle, outside of city
+- 98027: Issaquah (far East of Seattle, outside of the city)
+- 98118: Seattle (Seward Park, Ranier Valley)
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+#### If area is priority and/or buyers have more budget (Top Positive Zipcodes):
+- 98039: Medina
+- 98004: Bellevue
+- 98112: (Seattle: Mann, Central Area)
+- 98102: (Seattle: Eastlake, Cascade)
+- 98109: (Seattle: Westlake, Cascade)
 
-### Key Points
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+#### Negative zipcodes
+- Address as buyer drives the conversation
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+## Future Work
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+#### Buyer Homework When Utilizing This Model
+Based on importance of area and features highly correlated with price, they should assess what is most important to them in a home. This will help us take more specific steps in their search. Since much of the price drivers are dependent on zipcode, it would be useful for buyers to do more contextual and qualitative research about the area as well.
 
-## Getting Started
+#### Additional Data Analysis and Modeling
+Due to the weight on zipcodes in driving price, there should be further research on the areas these zipcodes cover. On the surface the homes have seemingly similar stats beyond price, so there are clearly things not represented in the dataset that are driving these prices.
+In general, King County has plenty of open source data to explore and add to this model. Some thats stood out include schools and test scores, public transit/walk/bike scores, as well as crime in specific areas (https://www.kingcounty.gov/services/data.aspx).
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
-
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
-
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
