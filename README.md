@@ -27,7 +27,9 @@ Zipcodes were a key driver of price in this model. Thus, analysis was approached
 
 The /images folder holds the images of these plots.
 
-## Recommendations on Model Utilization In Guiding Buyer Search
+## Conclusion
+
+### Recommendations on Model Utilization In Guiding Buyer Search
 #### If new to the area or starting with no information
 - 98072: Woodinville (Northeast of Seattle, outside of city
 - 98027: Issaquah (far East of Seattle, outside of the city)
@@ -45,7 +47,7 @@ The /images folder holds the images of these plots.
 #### Negative zipcodes
 - Address as buyer drives the conversation
 
-## Future Work
+### Future Work
 
 #### Buyer Homework When Utilizing This Model
 Based on importance of area and features highly correlated with price, they should assess what is most important to them in a home. This will help us take more specific steps in their search. Since much of the price drivers are dependent on zipcode, it would be useful for buyers to do more contextual and qualitative research about the area as well.
@@ -53,4 +55,3 @@ Based on importance of area and features highly correlated with price, they shou
 #### Additional Data Analysis and Modeling
 Due to the weight on zipcodes in driving price, there should be further research on the areas these zipcodes cover. On the surface the homes have seemingly similar stats beyond price, so there are clearly things not represented in the dataset that are driving these prices.
 In general, King County has plenty of open source data to explore and add to this model. Some thats stood out include schools and test scores, public transit/walk/bike scores, as well as crime in specific areas (https://www.kingcounty.gov/services/data.aspx).
-
